@@ -1,0 +1,4 @@
+[core]
+    remote = social-remote
+['remote "social-remote"']
+    url = ../%TEMP%
