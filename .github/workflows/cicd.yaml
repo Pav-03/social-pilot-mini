@@ -106,21 +106,21 @@ jobs:
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 390844758498.dkr.ecr.eu-west-2.amazonaws.com
-
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 783764572772.dkr.ecr.eu-west-2.amazonaws.com
+     
       - name: Build Docker image
         if: success()
         run: |
-          docker build -t social_pilot .
+          docker build -t social_pilot_sentiment .
 
       - name: Tag Docker image
         if: success()
         run: |
-          docker tag social_pilot:latest 390844758498.dkr.ecr.eu-west-2.amazonaws.com/social_pilot:latest
+          docker tag social_pilot_sentiment:latest 783764572772.dkr.ecr.eu-west-2.amazonaws.com/social_pilot_sentiment:latest
 
       - name: Push Docker image to AWS ECR
         if: success()
         run: |
-          docker push 390844758498.dkr.ecr.eu-west-2.amazonaws.com/social_pilot:latest
+          docker push 783764572772.dkr.ecr.eu-west-2.amazonaws.com/social_pilot_sentiment:latest
 
       
