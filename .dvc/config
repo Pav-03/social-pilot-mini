@@ -1,4 +1,6 @@
 [core]
-    remote = social-remote
+    remote = myremote
 ['remote "social-remote"']
     url = ../%TEMP%
+['remote "myremote"']
+    url = s3://ytcommentdvcbucket
