@@ -1,57 +1,77 @@
-social-pilot
-==============================
+# Social Pilot
 
-A short description of the project.
+Social Pilot is a mini version of the Social Project, demonstrating key functionalities such as sentiment analysis, comment summarization, and recommendation systems. This project also includes a Chrome plugin for visualizing sentiment analysis results and providing automated replies using the OpenAI API, with user consent.
 
-Project Organization
-------------
+# Project Overview
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+The objective of Social Pilot is to:
+
+1) Simplify Sentiment Analysis: Apply traditional machine learning algorithms to analyze comment sentiments.
+
+2) Enable Visualization: Visualize key features to provide insights into the content of comments.
+
+3) Adopt Cost-Effective Practices: Build a high-performing model with minimal cost and effort, achieving a 92% accuracy.
+
+# Key Features
+
+1) Sentiment Analysis:
+- Built using traditional machine learning techniques.
+- Achieved an impressive 92% accuracy on a subset of YouTube comment data.
+
+2) Feature Visualization:
+- Interactive visualizations to interpret the sentiment analysis results.
+
+3) Chrome Plugin:
+- Provides an intuitive interface to display sentiment analysis results and recommendations.
+
+4) MLOps Deployment:
+- Implements industry best practices for seamless deployment and scalability.
+
+# Dataset
+
+-Utilizes YouTube comments labeled using Active Learning to enhance efficiency and accuracy.
+
+- The dataset used is a subset of the original data, with permission from the product owner.
+
+- Confidentiality: Data is strictly non-sharable due to usage restrictions.
+
+# Technologies Used
+
+1) Machine Learning:
+- Algorithms like Logistic Regression and Naive Bayes.
+- Preprocessing and feature engineering for better model performance.
+
+2) Visualization Tools:
+- Libraries for creating interactive visualizations of sentiment analysis features.
+
+3) Frontend Development:
+- Chrome plugin for result visualization.
+
+4) MLOps Frameworks:
+- MLflow for experiment tracking and artifact management.
+- DVC (Data Version Control) for data versioning.
+- AWS S3 for storing data and artifacts.
+
+# Deployment Process
+
+This project is deployed following MLOps best practices, ensuring scalability, automation, and reliability:
+
+1) Experiment Tracking and Artifact Management:
+- Used MLflow to log and track model experiments, performance metrics, and artifacts.
+
+2) Data Versioning:
+- Leveraged DVC (Data Version Control) to track dataset versions and manage the data pipeline.
+
+3) Storage:
+- Stored model artifacts and datasets securely in AWS S3 buckets.
+
+4) Continuous Integration/Continuous Deployment (CI/CD):
+- Set up a CI/CD pipeline using GitHub Actions to automate testing, model building, and deployment workflows.
+
+5) Containerization and Deployment:
+- Dockerized the application and stored the images in AWS ECR (Elastic Container Registry).
+- Deployed the application on AWS EC2 instances using AWS CodeDeploy for automated release management.
 
 
---------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
